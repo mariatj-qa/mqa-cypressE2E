@@ -24,7 +24,7 @@ describe('Login Functionality',()=>{
     })
 
     for(let i in users)
-    it('Login Positive Test',()=>{
+    it('Login Positive Test - with different users',()=>{
         cy.visit(Cypress.env('sauce_url'))
         loginPage.getLoginLogo().should('be.visible')
         loginPage.getLoginUsername().should('be.visible').type(users[i])
