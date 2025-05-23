@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mqa_cypress.iml" filepath="$PROJECT_DIR$/.idea/mqa_cypress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mqa-cypressE2E.iml" filepath="$PROJECT_DIR$/.idea/mqa-cypressE2E.iml" />
     </modules>
   </component>
 </project>

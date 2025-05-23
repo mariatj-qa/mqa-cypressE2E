@@ -1,5 +1,4 @@
-
-import LoginPage from "/Users/mashaqa/Desktop/Frameworks/mqa_cypress/cypress/support/pages/loginPage.cy.js"
+import LoginPage from "/Users/mashaqa/Documents/Frameworks/mqa-cypressE2E/cypress/support/pages/loginPage.cy.js"
 describe('Login Functionality',()=>{
     const loginPage = new LoginPage()
 
