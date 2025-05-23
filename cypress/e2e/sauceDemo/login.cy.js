@@ -6,7 +6,7 @@ describe('Login Functionality',()=>{
         'performance_glitch_user',
         'error_user',
         'visual_user']
-    let badPasswords = ['onlyString',
+    let passwords = ['onlyString',
         '1',
         'alllowercase',
         'small'
@@ -24,7 +24,7 @@ describe('Login Functionality',()=>{
     })
 
     for(let i in users)
-    it('Login Positive Test',()=>{
+    it('Login Positive Test - with different users',()=>{
         cy.visit(Cypress.env('sauce_url'))
         loginPage.getLoginLogo().should('be.visible')
         loginPage.getLoginUsername().should('be.visible').type(users[i])
@@ -35,12 +35,12 @@ describe('Login Functionality',()=>{
         loginPage.getProductsTitle().should('be.visible').should('contain','Products')
     })
 
-    for(let i in badPasswords)
+    for(let i in passwords)
     it('Login Negative Test',()=>{
         cy.visit(Cypress.env('sauce_url'))
         loginPage.getLoginLogo().should('be.visible')
         loginPage.getLoginUsername().should('be.visible').type(Cypress.env('sauce_username'))
-        loginPage.getLoginPassword().should('be.visible').type(badPasswords[i])
+        loginPage.getLoginPassword().should('be.visible').type(passwords[i])
         loginPage.getLoginBtn().should('be.visible').click()
         loginPage.getLoginErrorMsg().should('be.visible').should('contain','Epic sadface: Username and password do not match any user in this service')
     })
