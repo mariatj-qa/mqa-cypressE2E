@@ -36,7 +36,7 @@ describe('Login Functionality',()=>{
     })
 
     for(let i in badPasswords)
-    it.only('Login Negative Test',()=>{
+    it('Login Negative Test',()=>{
         cy.visit(Cypress.env('sauce_url'))
         loginPage.getLoginLogo().should('be.visible')
         loginPage.getLoginUsername().should('be.visible').type(Cypress.env('sauce_username'))
