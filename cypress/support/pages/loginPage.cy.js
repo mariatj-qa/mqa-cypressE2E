@@ -19,6 +19,9 @@ class LoginPage{
     getProductsTitle(){
         return cy.get("span[data-test='title']")
     }
+    getLoginErrorMsg(){
+        return cy.get("h3[data-test='error']")
+    }
 
 }
 export default LoginPage
