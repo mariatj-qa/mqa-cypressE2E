@@ -8,7 +8,8 @@ module.exports = defineConfig({
         env:{
             sauce_url: "https://www.saucedemo.com/",
             sauce_username:process.env.SAUCE_USERNAME,
-            sauce_password:process.env.SAUCE_PASSWORD
+            sauce_password:process.env.SAUCE_PASSWORD,
+            cyLogStyles: "danger"
         }
     },
 });

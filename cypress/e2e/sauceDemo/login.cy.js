@@ -12,7 +12,7 @@ describe('Login Functionality',()=>{
         'small'
     ]
 
-    it('Login Positive Test',()=>{
+    it.only('Login Positive Test',()=>{
         cy.visit(Cypress.env('sauce_url'))
         loginPage.getLoginLogo().should('be.visible')
         loginPage.getLoginUsername().should('be.visible').type(Cypress.env('sauce_username'))
@@ -21,6 +21,7 @@ describe('Login Functionality',()=>{
         cy.url().should('include','/inventory.html')
         loginPage.getShoppingCart().should('be.visible')
         loginPage.getProductsTitle().should('be.visible').should('contain','Products')
+        cy.log("Test Passed!")
     })
 
     for(let i in users)
