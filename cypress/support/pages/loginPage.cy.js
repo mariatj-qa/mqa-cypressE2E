@@ -10,6 +10,9 @@ class LoginPage{
     getLoginPassword(){
         return cy.get("input[data-test='password']")
     }
+    getLoginPasswordValue(){
+        return cy.get("div[class='login_password']")
+    }
     getLoginBtn(){
         return cy.get("input[data-test='login-button']")
     }
